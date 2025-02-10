@@ -1,0 +1,77 @@
+/* General Page Styling */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    padding-top: 50px; /* Space from the top */
+    background-color: #f4f4f4;
+  }
+  
+  /* Success Message Styling */
+  .success-message-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    background: #e6ffe6;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Email Form Styling */
+  .email-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input Group */
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Button Styling */
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-btn:hover {
+    background-color: #0056b3;
+  }
+  

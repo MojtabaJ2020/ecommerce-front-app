@@ -1,0 +1,82 @@
+/* Main Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-left {
+  flex: 1;
+}
+
+.nav-left .logo img {
+  width: 150px;
+  height: auto;
+}
+
+.nav-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 80%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: #ff6347; /* Change color on hover */
+}
+
+.signup-btn {
+  background-color: #4CAF50;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.signup-btn:hover {
+  background-color: #45a049;
+}
+
+/* User info section (for logged-in users) */
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user-info span {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
