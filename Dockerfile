@@ -1,25 +1,24 @@
-# Use an official Node.js image to build the React app
-FROM node:18 AS build
+# Use a lightweight Node.js image to build the React app
+FROM node:18-alpine AS build
 
-# Set working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json first (for better caching)
+# Copy only package.json and package-lock.json for better caching
 COPY package.json package-lock.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies using npm ci for faster, consistent builds
+RUN npm ci
 
-# Copy the rest of the application files
+# Copy the rest of the application files (but ignore files via .dockerignore)
 COPY . .
 
 # Build the React app
 RUN npm run build
 
-# Use an official Nginx image to serve the app
+# Use a lightweight Nginx image to serve the built React app
 FROM nginx:alpine
 
-# Copy the built React files from the previous stage to the Nginx public directory
+# Copy built React files from the previous stage
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Copy custom Nginx configuration
